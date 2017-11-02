@@ -1,0 +1,12 @@
+doctype html
+html(lang="en")
+  body(style='text-align: center')
+    h1(textAlign='center') API Project: File Metadata Microservice
+    h2 Upload a file
+    if message !== undefined
+      p #{message}
+    if size !== undefined
+      p #{size}
+    form(role='form', action='/api/upload', method='post', enctype='multipart/form-data')
+      input(type='file' name='upfile')
+      button(type='submit') Upload
